@@ -1,0 +1,92 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0.0",
+    "title": "Consulta de CEP API",
+    "description": "API para consulta de CEP utilizando Express e Axios"
+  },
+  "basePath": "/",
+  "schemes": [
+    "http",
+    "https"
+  ],
+  "paths": {
+    "/cep/{cep}": {
+      "get": {
+        "summary": "Consultar CEP",
+        "description": "Endpoint para consultar um CEP específico",
+        "parameters": [
+          {
+            "name": "cep",
+            "in": "path",
+            "description": "CEP para consulta",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Sucesso",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "cep": {
+                  "type": "string",
+                  "example": "01001-000"
+                },
+                "logradouro": {
+                  "type": "string",
+                  "example": "Praça da Sé"
+                },
+                "complemento": {
+                  "type": "string",
+                  "example": "lado ímpar"
+                },
+                "bairro": {
+                  "type": "string",
+                  "example": "Sé"
+                },
+                "localidade": {
+                  "type": "string",
+                  "example": "São Paulo"
+                },
+                "uf": {
+                  "type": "string",
+                  "example": "SP"
+                },
+                "ibge": {
+                  "type": "string",
+                  "example": "3550308"
+                },
+                "gia": {
+                  "type": "string",
+                  "example": "1004"
+                },
+                "ddd": {
+                  "type": "string",
+                  "example": "11"
+                },
+                "siafi": {
+                  "type": "string",
+                  "example": "7107"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Erro",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "error": {
+                  "type": "string",
+                  "example": "Erro ao consultar o CEP"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
