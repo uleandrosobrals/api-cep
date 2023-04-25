@@ -23,7 +23,7 @@ git clone https://github.com/uleandrosobrals/api-cep
 2. Acesse o diretório do projeto:
 
 ```bash
-cd apicep
+cd api-cep
 ```
 
 3. Instale as dependências:
