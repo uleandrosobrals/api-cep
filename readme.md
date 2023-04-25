@@ -17,7 +17,7 @@ Para executar a API em seu ambiente local, siga os passos abaixo:
 1. Clone o repositório do projeto:
 
 ```bash
-git clone <URL do repositório>
+git clone https://github.com/uleandrosobrals/api-cep
 ```
 
 2. Acesse o diretório do projeto:
